@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-60li4a0vjx02_j=#rp89p3cpiomj#_ct9beo*&b8^j9v-udui+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-trxdave-boutiqueadov1-gc0w402svja.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-trxdave-boutiqueadov1-1r038crguiq.ws.codeinstitute-ide.net']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
@@ -84,6 +84,8 @@ TEMPLATES = [
         },
     },
 ]
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
 
