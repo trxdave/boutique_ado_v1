@@ -48,7 +48,8 @@ SECRET_KEY = 'django-insecure-60li4a0vjx02_j=#rp89p3cpiomj#_ct9beo*&b8^j9v-udui+
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-trxdave-boutiqueadov1-3kbf7gurx6q.ws.codeinstitute-ide.net', 
-                 'trxdave-boutique-ado-dc-5f1e010b5571.herokuapp.com']
+                 'boutique-ado-dc-5f1e010b5571.herokuapp.com', 'boutique-ado-dc.herokuapp.com',
+                 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
