@@ -30,6 +30,9 @@ STRIPE_CURRENCY = os.getenv('STRIPE_CURRENCY', 'usd')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_KEY', '')
 DEFAULT_FROM_EMAIL = 'daveguy28@gmail.com'
 
+# Heroku
+HEROKU_API_KEY = os.getenv("HEROKU_API_KEY")
+
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
@@ -45,7 +48,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-60li4a0vjx02_j=#rp89p3cpiomj#_ct9beo*&b8^j9v-udui+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-trxdave-boutiqueadov1-3kbf7gurx6q.ws.codeinstitute-ide.net', 
                  'boutique-ado-dc-5f1e010b5571.herokuapp.com', 'boutique-ado-dc.herokuapp.com',
