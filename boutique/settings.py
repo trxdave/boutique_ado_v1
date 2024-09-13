@@ -47,7 +47,8 @@ SECRET_KEY = 'django-insecure-60li4a0vjx02_j=#rp89p3cpiomj#_ct9beo*&b8^j9v-udui+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-trxdave-boutiqueadov1-3kbf7gurx6q.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-trxdave-boutiqueadov1-3kbf7gurx6q.ws.codeinstitute-ide.net', 
+                 'trxdave-boutique-ado-dc-5f1e010b5571.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.gitpod.io',
@@ -149,12 +150,18 @@ WSGI_APPLICATION = 'boutique.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-    # 'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-# }
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
