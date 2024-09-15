@@ -30,9 +30,6 @@ STRIPE_CURRENCY = os.getenv('STRIPE_CURRENCY', 'usd')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_KEY', '')
 DEFAULT_FROM_EMAIL = 'daveguy28@gmail.com'
 
-# Heroku
-HEROKU_API_KEY = os.getenv("HEROKU_API_KEY")
-
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
@@ -82,6 +79,7 @@ INSTALLED_APPS = [
     #Other
     'crispy_forms',
     'crispy_bootstrap4',
+
 ]
 
 MIDDLEWARE = [
