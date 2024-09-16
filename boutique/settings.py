@@ -45,9 +45,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-trxdave-boutiqueadov1-htlbeesznvf.ws.codeinstitute-ide.net', 'localhost',
+ALLOWED_HOSTS = ['8000-trxdave-boutiqueadov1-uan8h0s3ce2.ws.codeinstitute-ide.net', 'localhost',
                  'boutique-ado-dc-5f1e010b5571.herokuapp.com',
                  ]
 
@@ -75,6 +75,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'boutique_ado',
 
     #Other
     'crispy_forms',
